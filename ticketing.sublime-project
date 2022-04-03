@@ -1,0 +1,32 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"name": "Documentation Source",
+			"folder_exclude_patterns": [ "dist"	 ],
+			"file_include_patterns": [ "*.md" ],
+            "follow_symlinks": false
+		},
+		{
+			"path": "dist",
+			"name": "Generated Documentation",
+            "follow_symlinks": false
+		}
+	],
+	"settings":
+	{
+		"word_wrap": true,
+		"wrap_width": 72,
+		"wrap_width_style": "constant",
+		"always_show_minimap_viewport": true,
+		"draw_minimap_border": true
+	},
+	"build_systems":
+    [
+        {
+            "name": "build documentation into dist",
+            "shell_cmd": "Make"
+        }
+    ]
+}
