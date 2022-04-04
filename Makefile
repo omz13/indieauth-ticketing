@@ -1,4 +1,8 @@
-main: dist/indieauth-ticketing.html dist/indieauth-ticketing.txt
+main: dist dist/indieauth-ticketing.html dist/indieauth-ticketing.txt
+
+.PHONY:dist
+dist:
+	if [ ! -d dist ] ; then mkdir dist; fi
 
 .tmp.xml: main.md
 	@echo processing source markdown into xml2rfc
@@ -46,6 +50,6 @@ ready:
 
 clean:
 	rm -rf .tmp.xml
-	rm -rf dist/*.txt
-	rm -rf dist/*.html
-	rm -rf dist/*.pdf
+	rm -rf dist/indieauth-ticketing*.txt
+	rm -rf dist/indieauth-ticketing*.html
+	rm -rf dist/indieauth-ticketing*.pdf
